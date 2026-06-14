@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard Antrian Klinik Poliban</title>
+
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div class="logo-placeholder"></div>
+
+      <div class="header-text">
+        <h1>Dashboard Antrian Klinik Poliban</h1>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Antrian saat ini</div>
+      <div id="currentQueues" class="queue-grid"></div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-title">Total antrian hari ini</div>
+        <div id="issued" class="stat-value">0</div>
+        <div class="stat-label">issued</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Menunggu</div>
+        <div id="waiting" class="stat-value">0</div>
+        <div class="stat-label">queue</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Antrian berikutnya</div>
+        <div id="next" class="stat-value">0</div>
+        <div class="stat-label">next</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Status perangkat</div>
+      <div id="devices"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Riwayat pelayanan</div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Antrian</th>
+              <th>Loket</th>
+              <th>Tanggal</th>
+              <th>Waktu</th>
+              <th>Durasi</th>
+            </tr>
+          </thead>
+          <tbody id="history"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./script.js" />
+</body>
+</html>
