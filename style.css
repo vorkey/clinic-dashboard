@@ -34,35 +34,25 @@ body {
 }
 
 .header {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 16px 18px;
   display: flex;
   align-items: center;
+  margin: auto;
+  width: max-content;
   gap: 14px;
 }
 
-.logo-placeholder {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  border: 1px dashed var(--border);
-  background: var(--surface-2);
+.logo {
+  width: 128px;
+  border-radius: 100%;
   flex: 0 0 auto;
 }
 
-.header-text h1 {
-  font-size: 16px;
+.header-text {
   margin: 0;
-  font-weight: 600;
+  font-weight: bold;
+  text-transform: uppercase;
   line-height: 1.2;
-}
-
-.header-text p {
-  margin: 4px 0 0;
-  font-size: 12px;
-  color: var(--muted);
+  color: var(--primary);
 }
 
 .card {
@@ -78,7 +68,8 @@ body {
   margin-bottom: 12px;
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  text-align: center;
+  /* letter-spacing: 0.06em; */
 }
 
 .grid {
@@ -90,13 +81,8 @@ body {
 .stat-value {
   font-size: 32px;
   font-weight: 700;
+  text-align: center;
   color: var(--primary);
-}
-
-.stat-label {
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 4px;
 }
 
 .queue-grid {
@@ -114,10 +100,9 @@ body {
 }
 
 .queue-counter {
-  font-size: 11px;
   color: var(--muted);
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .queue-number {
