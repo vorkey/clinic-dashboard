@@ -1,7 +1,7 @@
 const devices = {};
 const counters = {};
 
-const client = mqtt.connect("ws://broker.emqx.io:8083/mqtt");
+const client = mqtt.connect("wss://broker.emqx.io:8084/mqtt");
 
 client.on("connect", () => {
   client.subscribe("iotuas/clinic/dashboard/status");
